@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 	<script src="index.js" defer></script>
 	<title>Shopify Dev puntoJson</title>
@@ -28,14 +29,19 @@
 		</div>
 	</header>
 	<main>
-		<section>
-			<div>
-				<h1>Build any commerce experience</h1>
-				<p>Compose, customize, and extend every part of the commerce stack—from storefront to checkout to backend integrations—and create unique experiences for your brand or millions of merchants around the world.</p>
-				<a href="">Explore docs </a><img src="img/icons/flecha.svg">
+		<section id="construir" >
+			<div class="dos-columnas contenedor-chico">
+				<div>
+					<h1>Build any commerce experience</h1>
+					<p>Compose, customize, and extend every part of the commerce stack—from storefront to checkout to backend integrations—and create unique experiences for your brand or millions of merchants around the world.</p>
+					<a href="">Explore docs <img src="img/icons/flecha.svg"></a>
+				</div>
+				<div>
+					<div> </div>
+				</div>
 			</div>
 		</section>
-		<section id="marcas">
+		<section id="marcas" class="contenedor-chico">
 			<img src="img/marcas/1.svg" alt="mattel logo">
 			<img src="img/marcas/2.svg" alt="allbirds logo">
 			<img src="img/marcas/3.svg" alt="glossier logo">
@@ -44,35 +50,37 @@
 			<img src="img/marcas/6.svg" alt="coty logo">
 			<img src="img/marcas/7.svg" alt="klaviyo logo">
 		</section>
-		<section>
-			<h2>A complete set of APIs, primitives, and tools designed for commerce</h2>
-			<div>
-				<div>
-					<p>Shopify’s platform provides APIs, SDKs, primitives, and tools for building <a href="#">storefronts</a>, custom cart and <a href="#">checkout</a> flows, and seamless <a href="#">integrations</a> with your systems.</p>
-					<p>Get full flexibility to assemble, customize, and extend the entire commerce experience, all with the backing of our global infrastructure, scalability, and reliability.</p>
-				</div>
-				<ul>
-					<li>APIs in GraphQL and REST</li>
-					<li>React-based framework and component library for accelerating storefront development</li>
-					<li>Commerce primitives for building subscription plans, selling B2B, expanding internationally, and more</li>
-					<li>Shopify CLI for building, testing, and managing your integration</li>
-					<li>Ready-to-use UI components for getting started quickly</li>
-					<li>Ecosystem of prebuilt and reference implementations for integrations with systems like Netsuite and Sanity</li>
-				</ul>
-			</div>
+		<section id="apis">
+		<h2 class="contenedor-chico">A complete set of APIs, primitives, and tools designed for commerce</h2>
+		<div class="contenedor-chico dos-columnas">
+		<div>
+			<p>Shopify’s platform provides APIs, SDKs, primitives, and tools for building <a href="#">storefronts</a>, custom cart and <a href="#">checkout</a> flows, and seamless <a href="#">integrations</a> with your systems.</p>
+			<p>Get full flexibility to assemble, customize, and extend the entire commerce experience, all with the backing of our global infrastructure, scalability, and reliability.</p>
+		</div>
+		<ul>
+			<li>APIs in GraphQL and REST</li>
+			<li>React-based framework and component library for accelerating storefront development</li>
+			<li>Commerce primitives for building subscription plans, selling B2B, expanding internationally, and more</li>
+			<li>Shopify CLI for building, testing, and managing your integration</li>
+			<li>Ready-to-use UI components for getting started quickly</li>
+			<li>Ecosystem of prebuilt and reference implementations for integrations with systems like Netsuite and Sanity</li>
+		</ul>
+	</div>
+</div>
 		</section>
-		<section>
+		<section id="best-in-class" class="dos-columnas">
 			<div>
 				<h2>Best-in-class developer experience</h2>
+				<p>Accelerate development, testing, and deployment with our suite of tools, including the Hydrogen framework, Shopify CLI, example apps, and development stores.</p>
+				<p>Build quickly with official libraries for popular frameworks and languages from JavaScript and React to Node, Ruby, and PHP.</p>
 			</div>
-			<p>Accelerate development, testing, and deployment with our suite of tools, including the Hydrogen framework, Shopify CLI, example apps, and development stores.</p>
-			<p>Build quickly with official libraries for popular frameworks and languages from JavaScript and React to Node, Ruby, and PHP.</p>
 			<div>
 				<img src="./img/notebook.webp" alt="Computer">
 			</div>
 		</section>
-		<section>
+		<section id="tarjetas" class="contenedor-chico">
 			<h2>Flexibility & extensibility without compromise</h2>
+			<div class="grid-cuatro">
 			<div class="card">
 				<img src="./img/icons/spedoometer.png" alt="Medidor de velocidad">
 				<h3>Designed for scale</h3>
@@ -94,8 +102,10 @@
 				<h3>Continued innovation</h3>
 				<p>We’re always improving our platform, and investing in open source tools like Hydrogen and Remix for building storefronts.</p>
 			</div>
+		</div>
+
 		</section>
-		<section>
+		<section class="dos-columnas contenedor-chico">
 			<div>
 				<h2>A built-in, global audience</h2>
 				<p>Build and sell apps and themes that customize and extend Shopify’s capabilities for millions of merchants around the world.</p>
@@ -103,9 +113,9 @@
 			</div>
 			<div></div>
 		</section>
-		<section>
-			<div>
-				<div class="card" id="getStarted">
+		<section id="audiencia" class="contenedor-chico">
+			<div class="grid-cuatro">
+				<div class="card" id="getStarted" style="--color-borde:var(--color-highlight)">
 					<img src="./img/icons/getstarted.avif">
 					<h3>Get Started</h3>
 				</div>
@@ -115,7 +125,6 @@
 					<p>Create custom storefronts and deliver unique shopping experiences
 					</p>
 				</div>
-			</section>
 			<div class="card">
 				<img src="/img/icons/puzzle.png">
 				<h4>Build an app</h4>
@@ -129,7 +138,7 @@
 				<p>Design beautiful themes to shape the online store experience</p>
 			</div>
 			<div>
-				<div class="card" id="getStarted">
+				<div class="card" id="getStarted" style="--color-borde:var(--color-highlight-alt)">
 					<h3>Join a community of builders</h3>
 				</div>
 				<div class="card">
@@ -139,7 +148,6 @@
 						Q&A and advice from Shopify community experts
 					</p>
 				</div>
-			</section>
 			<div class="card">
 				<img src="img/icons/changelog.png">
 				<h4>Developer changelog</h4>
@@ -156,9 +164,11 @@
 			</div>
 			</div>
 		</div>
+	</section>
+
 	</main>
 	<footer>
-		<div id="footer-top">
+		<div id="footer-top" class="contenedor-chico">
 			<div>
 				<h3>Updates & News</h3>
 				<ul>

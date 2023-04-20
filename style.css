@@ -1,0 +1,241 @@
+:root{
+  --color-background: #ffffff;
+  --color-background-alt: #f6f6f7;
+  --color-text: #202223;
+  --color-highligth: #308023;
+  --color-highlight-list: #286d1d;
+  --color-highlight-alt: #4090ff;
+  --color-cards:#fafbfb;
+  --borde-punteado: 1px dashed var(--color-highligth);
+  --borde-punteado2: linear-gradient(to right, var(--color-highligth, var(--color-background)) 2px, rgba(255,255,255,0) 0%);
+  --contenedor-chico: 86px;
+  --color-borde-lista: #5feb48;
+  --margin-items: 2.5rem;
+  --border-radius: 16px;
+}
+
+a{
+  color: var(--color-text);
+}
+
+body{
+  color:var(--color-text);
+  background-color: var(--color-background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+}
+
+p, li{
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+img, div, section{
+  image-rendering: pixelated;
+}
+
+.dos-columnas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1, h2{
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 3.5rem;
+}
+
+h3, h4{
+  font-weight: 500;
+}
+
+h1:after, h2:after{
+  content: "";
+  display: block;
+  background-color: var(--color-highligth);
+  height: 0.25rem;
+  width: 296px;
+  margin-top: 24px;
+  margin-bottom: var(--margin-items);
+}
+
+section{
+  margin-bottom: 72px;
+}
+
+.contenedor-chico{
+  margin: 0 var(--contenedor-chico);
+}
+
+.contenedor-grande{
+  width: 100%;
+}
+
+/* Sección construir */
+#construir{
+  position: relative;
+  background-color: var(--color-background-alt);
+  min-height: 41.5rem;
+  overflow-y: visible;
+  display: flex;
+}
+
+#construir>div>div:first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#construir a, #apis a{
+  color: var(--color-highligth);
+}
+#construir a{
+  height: 1rem;
+  translate: 0;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  font-weight: 600;
+}
+#construir a img{
+  height: 1rem;
+  translate: 0;
+  transition: 0.2s ease-in-out;
+}
+#construir a:hover img{
+  translate: 5px;
+}
+#construir>div>div:last-child{
+  position: absolute;
+  width: 100%;
+  right: 0px;
+  max-width: 37.5rem;
+  max-height: 47rem;
+}
+#construir>div>div:last-child div{
+  height: 100%;
+  width: 100%;
+  background-image: url(./img/edificios/edificios-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 600 / 752;
+  background-position: center;
+}
+
+/* Sección marcas */
+#marcas{
+  display: flex;
+  justify-content: space-between;
+  border-top: var(--borde-punteado);
+  border-bottom: var(--borde-punteado);
+  padding: 40px 0;
+}
+
+/* Sección APIs */
+#apis{
+  background-image: url(./img/edificios/edificios-2.png);
+  background-size: cover;
+  background-size:122rem auto;
+  bottom:0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 200px;
+}
+ul{
+  color: var(--color-highlight-list);
+}
+li{
+  margin-left: 2rem;
+  margin-bottom: unset;
+  padding: 20px 0;
+  border-bottom: var(--borde-punteado);
+  border-color: var(--color-borde-lista);
+}
+li:before{
+  content: "✓";
+  display: inline-block;
+  color: var(--color-highligth);
+  background-image: url(./img/icons/checkbox.svg);
+  height: 14px;
+  width: 10px;
+  margin-right: 20px;
+}
+
+/* Sección best in class */
+#best-in-class{
+  background-color: var(--color-background-alt);
+  margin: 1rem;
+  padding: 6rem;
+  border-radius: var(--border-radius);
+}
+
+/* Sección flexibilidad */
+.card{
+  background-color: var(--color-cards);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+.card p{
+  font-size: 14px;
+}
+
+/* Sección tarjetas */
+.grid-cuatro{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#tarjetas .card img{
+  width: 64px;
+}
+
+/* Sección audiencia */
+
+#audiencia .card img{
+  width: 48px;
+}
+
+#audiencia .card:first-of-type img{
+  width: 116px;
+}
+
+#audiencia .card{
+  translate:0;
+  transition: 0.3ms;
+}
+
+#audiencia .card:hover{
+  translate:(0,-10px);
+}
+
+
+/* Footer */
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-background: #0d1213;
+    --color-background-alt: #151d1e;
+    --color-text: #eef1f1;
+    --color-highligth: #5ce546;
+    --color-highlight-alt: #9db8f7;
+    --color-highlight-list: #BFFBE9;
+    --color-cards:#151d1e;
+    --color-borde-lista: #2b3a2a;
+  }
+  #apis{
+    background-image: url(./img/edificios/edificios-2-dark.webp);
+  }
+}
+
+@media (max-width < 960) {
+  .dos-columnas{
+    grid-template-columns: 1fr;
+  }
+  
+}
