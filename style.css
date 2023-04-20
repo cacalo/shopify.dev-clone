@@ -173,6 +173,9 @@ li:before{
   background-color: var(--color-cards);
   padding: 1.5rem;
   border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .card p{
@@ -185,11 +188,8 @@ li:before{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
-.card{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+
+
 
 #tarjetas .card img{
   width: 64px;
@@ -206,14 +206,28 @@ li:before{
 }
 
 #audiencia .card{
-  translate:0;
+  translate:0 0;
   transition: 0.3ms;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  transition: 0.2s;
 }
+#audiencia .card p{
+  margin: 0;
+}
+
 
 #audiencia .card:hover{
-  translate:(0,-10px);
+  translate:0 -5px;
+  box-shadow: 0px 10px 5px 0px rgba(0,5,0,0.25);
 }
 
+.highlighted-card{
+  border: solid 2px var(--color-borde);
+  margin:2px;
+  font-size: 1.3rem;
+  border-radius: var(--border-radius);
+  padding:1.5rem;
+} 
 
 /* Footer */
 
