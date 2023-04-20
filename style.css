@@ -8,7 +8,7 @@
   --color-cards:#fafbfb;
   --borde-punteado: 1px dashed var(--color-highligth);
   --borde-punteado2: linear-gradient(to right, var(--color-highligth, var(--color-background)) 2px, rgba(255,255,255,0) 0%);
-  --contenedor-chico: 86px;
+  --contenedor-chico: 150px;
   --color-borde-lista: #5feb48;
   --margin-items: 2.5rem;
   --border-radius: 16px;
@@ -70,6 +70,75 @@ section{
 .contenedor-grande{
   width: 100%;
 }
+
+/* Header */
+header{
+  height: 60px;
+  line-height: 60px;
+  font-size: 0.9rem;
+}
+
+.desplegable::after{
+  margin-left: 5px;
+  content: "▼";
+  color: var(--color-text);
+}
+
+header nav .contenedor-chico{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#searchbar{
+  margin-left: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-text);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background-color: var(--color-cards);
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+#searchbar img{
+  width: 20px;
+}
+
+#searchbar button{
+  border-radius: 3px;
+  border: 1px solid var(--color-text);
+}
+
+#searchbar input{
+  border: unset;
+  background-color: transparent;
+  width: 110px;
+}
+
+#logo{
+  position: absolute;
+  margin: 1rem;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+a:visited{
+  color:unset;
+}
+
+#tema{
+  background-color: unset;
+  border: unset;
+}
+
+nav a:last-of-type{
+  color: var(--color-highligth);
+  font-weight: 600;
+}
+
 
 /* Sección construir */
 #construir{
